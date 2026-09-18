@@ -29,8 +29,11 @@ function copyToRootPlugin(): Plugin {
 export default defineConfig({
   plugins: [react(), copyToRootPlugin()],
   resolve: {
+    dedupe: ['react', 'react-dom'],
     alias: {
       cursorix: resolve(__dirname, '../../packages/cursorix/src/index.ts'),
+      react: resolve(__dirname, 'node_modules/react'),
+      'react-dom': resolve(__dirname, 'node_modules/react-dom'),
     },
   },
 })
