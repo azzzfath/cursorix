@@ -1,0 +1,132 @@
+/* Cursorix Base Styles */
+
+.cursorix-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.cursorix-trail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  overflow: visible;
+}
+
+/* Hide native cursor when custom cursor is active */
+.cursorix-hide-cursor,
+.cursorix-hide-cursor * {
+  cursor: none !important;
+}
+
+/* Magnetic Repel element dynamic styles */
+[data-magnetic="repel"],
+[data-repel] {
+  display: inline-block;
+  will-change: transform;
+  transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Click Effect Animations */
+@keyframes cursorix-ripple-anim {
+  0% {
+    transform: translate3d(-50%, -50%, 0) scale(0.15);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate3d(-50%, -50%, 0) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes cursorix-pulse-anim {
+  0% {
+    transform: translate3d(-50%, -50%, 0) scale(0.2);
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate3d(-50%, -50%, 0) scale(1.15);
+    opacity: 0;
+  }
+}
+
+@keyframes cursorix-burst-particle {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(var(--burst-x, 0), var(--burst-y, 0), 0) scale(0);
+    opacity: 0;
+  }
+}
+
+.cursorix-click-ripple {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: cursorix-ripple-anim cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+}
+
+.cursorix-click-pulse {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: cursorix-pulse-anim cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+}
+
+.cursorix-click-burst {
+  position: fixed;
+  pointer-events: none;
+  width: 0;
+  height: 0;
+}
+
+.cursorix-burst-dot {
+  position: absolute;
+  border-radius: 50%;
+  animation: cursorix-burst-particle cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .cursorix-dot,
+  .cursorix-trail,
+  .cursorix-trail-canvas,
+  .cursorix-spotlight,
+  .cursorix-click-ripple,
+  .cursorix-click-pulse,
+  .cursorix-click-burst {
+    display: none !important;
+  }
+
+  .cursorix-hide-cursor,
+  .cursorix-hide-cursor * {
+    cursor: auto !important;
+  }
+}
+
+/* Disable custom cursor on touch/mobile devices */
+@media (pointer: coarse), (hover: none) {
+  .cursorix-container {
+    display: none !important;
+  }
+
+  .cursorix-hide-cursor,
+  .cursorix-hide-cursor * {
+    cursor: auto !important;
+  }
+}

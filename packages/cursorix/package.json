@@ -1,0 +1,67 @@
+{
+  "name": "cursorix",
+  "version": "0.1.0",
+  "description": "Beautiful, composable custom cursor effects for React",
+  "author": "azzzfath <azzamfathurrahman23@gmail.com>",
+  "license": "MIT",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./styles.css": "./dist/index.css"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.0"
+  },
+  "keywords": [
+    "react",
+    "cursor",
+    "custom-cursor",
+    "mouse",
+    "effects",
+    "animation",
+    "trail",
+    "spotlight",
+    "magnetic",
+    "morph"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azzzfath/cursorix.git"
+  },
+  "bugs": {
+    "url": "https://github.com/azzzfath/cursorix/issues"
+  },
+  "homepage": "https://github.com/azzzfath/cursorix#readme",
+  "sideEffects": [
+    "**/*.css"
+  ]
+}
