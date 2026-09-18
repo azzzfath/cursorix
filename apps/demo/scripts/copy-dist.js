@@ -3,16 +3,17 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const src = path.resolve(__dirname, '../dist');
+const demoDist = path.resolve(__dirname, '../dist');
 const rootDist = path.resolve(__dirname, '../../../dist');
-const appsDist = path.resolve(__dirname, '../../dist');
 
-if (fs.existsSync(src)) {
-  // Ensure both root /dist and apps/dist are populated
+// If apps/demo/dist exists, copy to root dist
+if (fs.existsSync(demoDist)) {
   fs.mkdirSync(rootDist, { recursive: true });
-  fs.cpSync(src, rootDist, { recursive: true });
-  console.log(`[copy-dist] Copied ${src} -> ${rootDist}`);
-
-  fs.mkdirSync(appsDist, { recursive: true });
-  fs.cpSync(src, appsDist, { recursive: true });
+  fs.cpSync(demoDist, rootDist, { recursive: true });
+  console.log(`[copy-dist] Copied ${demoDist} -> ${rootDist}`);
+} else if (fs.existsSync(rootDist)) {
+  // If root dist exists, copy to apps/demo/dist
+  fs.mkdirSync(demoDist, { recursive: true });
+  fs.cpSync(rootDist, demoDist, { recursive: true });
+  console.log(`[copy-dist] Copied ${rootDist} -> ${demoDist}`);
 }
