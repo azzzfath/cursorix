@@ -16,9 +16,9 @@ export function Header({ theme, onToggleTheme }: HeaderProps) {
         </a>
 
         <nav className="header-nav">
-          <a href="#showcase" data-morph>Presets</a>
-          <a href="#playground" data-morph>Playground</a>
-          <a href="#install" data-morph>Docs</a>
+          <a href="#showcase" data-morph>Gaya</a>
+          <a href="#playground" data-morph>Studio</a>
+          <a href="#install" data-morph>Dokumentasi</a>
           <a
             href="https://github.com/azzzfath/cursorix"
             target="_blank"

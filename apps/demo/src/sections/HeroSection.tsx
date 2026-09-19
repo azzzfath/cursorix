@@ -21,25 +21,24 @@ export function HeroSection() {
 
   return (
     <section className="hero" id="hero">
-      {/* Ambient Aurora Glow */}
-      <div className="hero-ambient-glow glow-1" />
-      <div className="hero-ambient-glow glow-2" />
-      <div className="hero-ambient-glow glow-3" />
-
       <div className="container">
         <div className="hero-content">
           <div className="hero-badge">
-            <span className="hero-badge-pill">Release</span>
-            <span className="hero-badge-text">v0.1.0 • Cursor Depok for React</span>
+            <span className="hero-badge-pill">📍 Depok</span>
+            <span className="hero-badge-text">Dibuat santai tapi performa ngebut • Zero deps</span>
           </div>
 
           <h1 className="hero-title">
-            Cursor Depok <br />
-            <span className="hero-title-gradient">for React</span>
+            Cursor Depok
           </h1>
 
+          <p className="hero-tagline">
+            Kursor website kamu, tapi gak ngebosenin.
+          </p>
+
           <p className="hero-subtitle">
-            A lightweight library to add smooth, interactive cursor effects to your React apps. Zero dependencies.
+            Library kursor kustom yang luwes, responsif, dan ringan untuk React.
+            Tinggal pasang satu komponen, gabungin efek magnet, jejak partikel, sampai spotlight sesuka hati.
           </p>
 
           {/* Package Manager & Copy Bar */}
@@ -63,7 +62,7 @@ export function HeroSection() {
               id="hero-install-btn"
               data-morph
               data-magnetic
-              title="Click to copy command"
+              title="Klik untuk copy perintah"
             >
               <div className="hero-install-left">
                 <span className="prefix">$</span>
@@ -82,35 +81,58 @@ export function HeroSection() {
                     </svg>
                   )}
                 </span>
-                <span className="copy-tooltip">{copied ? 'Copied' : 'Copy'}</span>
+                <span className="copy-tooltip">{copied ? 'Tersalin!' : 'Salin'}</span>
               </div>
             </div>
           </div>
 
-          {/* Feature Specs */}
-          <div className="hero-features">
-            <div className="hero-feature-item">
-              <span className="feature-stat">60 FPS</span>
-              <strong className="feature-title">Smooth</strong>
-              <span className="feature-desc">Zero lag animation</span>
+          {/* Interactive Tactile Mini Sandbox */}
+          <div className="hero-sandbox">
+            <div className="hero-sandbox-top">
+              <div className="sandbox-header-left">
+                <span className="sandbox-pulse-dot" />
+                <span className="sandbox-title">Coba Langsung Di Sini</span>
+              </div>
+              <span className="sandbox-hint">Arahin kursor ke tombol-tombol di bawah 👇</span>
             </div>
 
-            <div className="hero-feature-item">
-              <span className="feature-stat">0 deps</span>
-              <strong className="feature-title">Lightweight</strong>
-              <span className="feature-desc">Pure React &amp; CSS</span>
+            <div className="hero-sandbox-buttons">
+              <button
+                type="button"
+                className="sandbox-btn magnet-btn"
+                data-magnetic="attract"
+                data-magnetic-strength="0.85"
+              >
+                <span>🧲 Sedot Kursor</span>
+              </button>
+
+              <span
+                className="sandbox-btn repel-btn"
+                data-magnetic="repel"
+                data-magnetic-displacement="26"
+              >
+                <span>💨 Coba Dorong Aku</span>
+              </span>
+
+              <button
+                type="button"
+                className="sandbox-btn morph-btn"
+                data-morph
+                data-morph-size="64"
+              >
+                <span>✨ Kursor Membesar</span>
+              </button>
+
+              <button
+                type="button"
+                className="sandbox-btn click-btn"
+              >
+                <span>🎈 Klik Efek Ripple</span>
+              </button>
             </div>
 
-            <div className="hero-feature-item">
-              <span className="feature-stat">5 effects</span>
-              <strong className="feature-title">Modular</strong>
-              <span className="feature-desc">Mix &amp; match anytime</span>
-            </div>
-
-            <div className="hero-feature-item">
-              <span className="feature-stat">TypeScript</span>
-              <strong className="feature-title">Typed</strong>
-              <span className="feature-desc">Full type safety</span>
+            <div className="hero-sandbox-note">
+              <span>💡 Ditenagai <code>requestAnimationFrame</code> GPU — 0 lag, enteng, &amp; hemat baterai</span>
             </div>
           </div>
         </div>

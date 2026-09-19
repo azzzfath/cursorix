@@ -20,97 +20,97 @@ const showcaseCards: CursorCardData[] = [
   {
     number: '01',
     category: 'Minimal',
-    title: 'Dot',
-    description: 'A clean, responsive dot that follows your cursor.',
-    specs: ['10px Dot', 'Snappy', 'Ripple Click'],
+    title: 'Dot Minimal',
+    description: 'Titik simpel yang nempel presisi tanpa jeda, cocok buat web portofolio atau blog bersih.',
+    specs: ['10px Core', 'Ngebut', 'Ripple Click'],
     tags: ['dot', 'minimal', 'snappy'],
-    accentColor: '#e94560',
+    accentColor: '#e11d48',
     config: {
       dot: {
-        inner: { shape: 'circle', color: '#e94560', size: 10, smoothing: 0.95 },
+        inner: { shape: 'circle', color: '#e11d48', size: 10, smoothing: 0.95 },
       },
-      click: { variant: 'ripple', color: '#e94560', size: 36 },
+      click: { variant: 'ripple', color: '#e11d48', size: 36 },
     },
   },
   {
     number: '02',
     category: 'Dual Layer',
-    title: 'Dot + Ring',
-    description: 'An inner dot with a smooth floating outer ring.',
-    specs: ['8px Dot', '36px Ring', 'Smooth Float'],
+    title: 'Dot + Ring Melayang',
+    description: 'Kombinasi titik inti yang lincah dengan cincin luar yang melayang anggun.',
+    specs: ['8px Core', '36px Ring', 'Inersia Lembut'],
     tags: ['dual-layer', 'circle', 'floating'],
-    accentColor: '#ff6b6b',
+    accentColor: '#f97316',
     config: {
       dot: {
-        inner: { shape: 'circle', color: '#ff6b6b', size: 8, smoothing: 0.95 },
-        outer: { shape: 'circle', color: '#ff6b6b', size: 36, borderWidth: 2, smoothing: 0.45 },
+        inner: { shape: 'circle', color: '#f97316', size: 8, smoothing: 0.95 },
+        outer: { shape: 'circle', color: '#f97316', size: 36, borderWidth: 2, smoothing: 0.45 },
       },
-      click: { variant: 'ripple', color: '#ff6b6b', size: 38 },
+      click: { variant: 'ripple', color: '#f97316', size: 38 },
     },
   },
   {
     number: '03',
     category: 'Outline',
-    title: 'Ring Only',
-    description: 'A hollow ring with smooth trailing motion.',
-    specs: ['38px Ring', 'Smooth', 'No Core'],
+    title: 'Cincin Kosong',
+    description: 'Cincin luar berongga tanpa titik tengah, gerakan inersia sangat mengalir.',
+    specs: ['38px Ring', 'Mengalir', 'Tanpa Titik'],
     tags: ['outer-only', 'ring', 'smooth'],
-    accentColor: '#4ecdc4',
+    accentColor: '#0891b2',
     config: {
       dot: {
-        outer: { shape: 'circle', color: '#4ecdc4', size: 38, borderWidth: 2, smoothing: 0.4 },
+        outer: { shape: 'circle', color: '#0891b2', size: 38, borderWidth: 2, smoothing: 0.4 },
       },
-      click: { variant: 'ripple', color: '#4ecdc4', size: 40 },
+      click: { variant: 'ripple', color: '#0891b2', size: 40 },
     },
   },
   {
     number: '04',
-    category: 'Particle',
-    title: 'Trail',
-    description: 'A dynamic particle tail that follows cursor movement.',
-    specs: ['12 Dots', 'Comet Tail', 'Burst Click'],
+    category: 'Partikel',
+    title: 'Jejak Komet',
+    description: 'Ekor partikel lentur yang meliuk dinamis ngikutin ayunan mouse kamu.',
+    specs: ['12 Partikel', 'Lentur', 'Burst Click'],
     tags: ['trail', 'comet', 'physics'],
-    accentColor: '#845ef7',
+    accentColor: '#7c3aed',
     config: {
       dot: {
-        inner: { shape: 'circle', color: '#845ef7', size: 8, smoothing: 0.95 },
+        inner: { shape: 'circle', color: '#7c3aed', size: 8, smoothing: 0.95 },
       },
-      trail: { variant: 'comet', color: '#845ef7', length: 12, size: 6 },
-      click: { variant: 'burst', color: '#845ef7', size: 36 },
+      trail: { variant: 'comet', color: '#7c3aed', length: 12, size: 6 },
+      click: { variant: 'burst', color: '#7c3aed', size: 36 },
     },
   },
   {
     number: '05',
-    category: 'Interactive',
-    title: 'Magnetic & Morph',
-    description: 'Attracts to buttons and expands on hover.',
-    specs: ['Magnet', 'Push Text', 'Hover Expand'],
+    category: 'Interaktif',
+    title: 'Magnet & Dorong',
+    description: 'Kursor tertarik otomatis ke tombol dan bisa dorong tulisan menjauh.',
+    specs: ['Sedot Magnet', 'Dorong Teks', 'Morph Halo'],
     tags: ['magnetic', 'repel', 'morph'],
-    accentColor: '#06b6d4',
+    accentColor: '#2563eb',
     config: {
       dot: {
-        inner: { shape: 'circle', color: '#06b6d4', size: 8, smoothing: 0.95 },
-        outer: { shape: 'circle', color: '#06b6d4', size: 34, borderWidth: 2, smoothing: 0.45 },
+        inner: { shape: 'circle', color: '#2563eb', size: 8, smoothing: 0.95 },
+        outer: { shape: 'circle', color: '#2563eb', size: 34, borderWidth: 2, smoothing: 0.45 },
       },
       magnetic: { mode: 'both', radius: 150, strength: 0.6, maxDisplacement: 32 },
       morph: { hoverSize: 56, hoverOpacity: 0.2, duration: 300 },
-      click: { variant: 'ripple', color: '#06b6d4', size: 36 },
+      click: { variant: 'ripple', color: '#2563eb', size: 36 },
     },
   },
   {
     number: '06',
-    category: 'Lighting',
-    title: 'Spotlight',
-    description: 'A soft glow highlighting content under the cursor.',
-    specs: ['150px Radius', 'Soft Glow', 'Ambient'],
+    category: 'Glow',
+    title: 'Spotlight Sorot',
+    description: 'Cahaya lembut yang menerangi konten tepat di bawah posisi kursor.',
+    specs: ['150px Radius', 'Cahaya Lembut', 'Ambient'],
     tags: ['spotlight', 'radial', 'glow'],
-    accentColor: '#f59e0b',
+    accentColor: '#d97706',
     config: {
       dot: {
-        inner: { shape: 'circle', color: '#f59e0b', size: 8, smoothing: 0.95 },
+        inner: { shape: 'circle', color: '#d97706', size: 8, smoothing: 0.95 },
       },
-      spotlight: { variant: 'radial', color: '#f59e0b', radius: 150, opacity: 0.15 },
-      click: { variant: 'pulse', color: '#f59e0b', size: 40 },
+      spotlight: { variant: 'radial', color: '#d97706', radius: 150, opacity: 0.15 },
+      click: { variant: 'pulse', color: '#d97706', size: 40 },
     },
   },
 ];
@@ -127,10 +127,10 @@ export function ShowcaseSection({ onCursorChange }: ShowcaseSectionProps) {
     <section id="showcase" className="showcase-section">
       <div className="container">
         <div className="section-header">
-          <div className="section-eyebrow">Presets</div>
-          <h2>Cursor Styles</h2>
+          <div className="section-eyebrow">Katalog Gaya</div>
+          <h2>Pilihan Gaya Kursor</h2>
           <p>
-            Hover over any card to preview the cursor.
+            Arahin kursor kamu ke kartu mana aja untuk langsung ngerasain karakternya.
           </p>
         </div>
 
@@ -185,14 +185,14 @@ export function ShowcaseSection({ onCursorChange }: ShowcaseSectionProps) {
                         data-magnetic-strength="0.8"
                         type="button"
                       >
-                        <span>🧲 Attract</span>
+                        <span>🧲 Sedot</span>
                       </button>
                       <span
                         className="card-stage-pill repel-pill"
                         data-magnetic="repel"
                         data-magnetic-displacement="26"
                       >
-                        💨 Push Text
+                        💨 Dorong Teks
                       </span>
                     </div>
                   ) : (
@@ -201,7 +201,7 @@ export function ShowcaseSection({ onCursorChange }: ShowcaseSectionProps) {
                       data-morph
                       data-morph-size="52"
                     >
-                      Hover Me
+                      Sentuh Aku
                     </span>
                   )}
                 </div>
@@ -224,7 +224,7 @@ export function ShowcaseSection({ onCursorChange }: ShowcaseSectionProps) {
                       onCursorChange(card.config);
                     }}
                   >
-                    <span>Customize</span>
+                    <span>Atur di Studio</span>
                     <span className="arrow-icon">→</span>
                   </a>
                 </div>

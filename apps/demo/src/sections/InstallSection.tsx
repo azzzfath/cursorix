@@ -44,36 +44,37 @@ export function InstallSection() {
     <section className="install-section" id="install">
       <div className="container">
         <div className="section-header">
-          <h2>Quick Start</h2>
-          <p>Install and use in minutes.</p>
+          <div className="section-eyebrow">Dokumentasi Cepat</div>
+          <h2>Cara Pemasangan</h2>
+          <p>Cuma butuh 2 menit, kursor web kamu langsung beda dan lebih hidup.</p>
         </div>
 
         <div className="install-grid">
           <div className="install-step">
             <div className="install-step-number">1</div>
-            <h3>Install</h3>
-            <p>Add cursor-depok to your project.</p>
+            <h3>Install Package</h3>
+            <p>Pasang cursor-depok lewat npm, pnpm, atau yarn.</p>
             <CodeExample code={installCode} title="Terminal" />
           </div>
 
           <div className="install-step">
             <div className="install-step-number">2</div>
-            <h3>Add Component</h3>
-            <p>Import and configure the cursor component.</p>
+            <h3>Pasang Komponen</h3>
+            <p>Import dan letakkan komponen &lt;Cursor /&gt; di root aplikasi kamu.</p>
             <CodeExample code={usageCode} title="App.tsx" />
           </div>
 
           <div className="install-step">
             <div className="install-step-number">3</div>
-            <h3>Magnetic Effect</h3>
-            <p>Add data-magnetic to any element to attract the cursor.</p>
+            <h3>Efek Magnetik</h3>
+            <p>Cukup kasih atribut <code>data-magnetic</code> ke tombol atau link apa aja.</p>
             <CodeExample code={magneticCode} title="JSX" />
           </div>
 
           <div className="install-step">
             <div className="install-step-number">4</div>
-            <h3>Morph Effect</h3>
-            <p>Add data-morph to expand the cursor on hover.</p>
+            <h3>Efek Morph</h3>
+            <p>Beri atribut <code>data-morph</code> biar kursor membesar pas di-hover.</p>
             <CodeExample code={morphCode} title="JSX" />
           </div>
         </div>

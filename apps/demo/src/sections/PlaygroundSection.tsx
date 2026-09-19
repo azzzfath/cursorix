@@ -418,9 +418,9 @@ export function PlaygroundSection({ onConfigChange }: PlaygroundSectionProps) {
     <section id="playground" className="playground-section">
       <div className="container">
         <div className="section-header">
-          <div className="section-eyebrow">Playground</div>
-          <h2>Interactive Studio</h2>
-          <p>Customize your cursor in real time and copy the code.</p>
+          <div className="section-eyebrow">Studio Interaktif</div>
+          <h2>Studio Kustomisasi</h2>
+          <p>Ubah parameter kursor secara real-time, rasain interaksinya di panggung, dan langsung copy kodenya.</p>
         </div>
 
         <div className="playground-layout">
@@ -428,7 +428,7 @@ export function PlaygroundSection({ onConfigChange }: PlaygroundSectionProps) {
             <div className="playground-preview-header">
               <div className="preview-status">
                 <span className="live-dot" />
-                <span>Live Stage</span>
+                <span>Panggung Uji Coba</span>
               </div>
               <div className="preview-layer-tags">
                 {enabledEffects.innerDot && <span className="preview-tag inner-tag">Inner Dot</span>}
@@ -447,7 +447,7 @@ export function PlaygroundSection({ onConfigChange }: PlaygroundSectionProps) {
               <div className="preview-crosshair-center" />
 
               <div className="stage-callout">
-                Move your cursor here to test
+                Gerakin kursor ke panggung untuk ngetes setelan kamu
               </div>
 
               <div className="preview-interactive-row">
@@ -457,7 +457,7 @@ export function PlaygroundSection({ onConfigChange }: PlaygroundSectionProps) {
                   data-magnetic-strength="0.8"
                   type="button"
                 >
-                  <span>🧲 Attract</span>
+                  <span>🧲 Sedot Kursor</span>
                 </button>
 
                 <button
@@ -466,35 +466,35 @@ export function PlaygroundSection({ onConfigChange }: PlaygroundSectionProps) {
                   data-morph-size="68"
                   type="button"
                 >
-                  <span>Hover Expand</span>
+                  <span>✨ Kursor Membesar</span>
                 </button>
               </div>
 
               {/* Repel Physics Box (Dorong Tulisan) */}
               <div className="preview-repel-box">
                 <div className="repel-box-title">
-                  <span>⚡ Repel Effect</span>
+                  <span>⚡ Efek Dorong Teks (Repel)</span>
                 </div>
                 <p className="repel-text">
-                  <span className="repel-word" data-magnetic="repel" data-magnetic-displacement={magneticConfig.maxDisplacement}>Hover</span>{' '}
-                  <span className="repel-word" data-magnetic="repel" data-magnetic-displacement={magneticConfig.maxDisplacement}>near</span>{' '}
-                  <span className="repel-word" data-magnetic="repel" data-magnetic-displacement={magneticConfig.maxDisplacement}>these</span>{' '}
-                  <span className="repel-word" data-magnetic="repel" data-magnetic-displacement={magneticConfig.maxDisplacement}>words</span>{' '}
-                  <span className="repel-word" data-magnetic="repel" data-magnetic-displacement={magneticConfig.maxDisplacement}>to</span>{' '}
-                  <span className="repel-word" data-magnetic="repel" data-magnetic-displacement={magneticConfig.maxDisplacement}>push</span>{' '}
-                  <span className="repel-word" data-magnetic="repel" data-magnetic-displacement={magneticConfig.maxDisplacement}>them</span>{' '}
-                  <span className="repel-word" data-magnetic="repel" data-magnetic-displacement={magneticConfig.maxDisplacement}>away!</span>
+                  <span className="repel-word" data-magnetic="repel" data-magnetic-displacement={magneticConfig.maxDisplacement}>Arahin</span>{' '}
+                  <span className="repel-word" data-magnetic="repel" data-magnetic-displacement={magneticConfig.maxDisplacement}>mouse</span>{' '}
+                  <span className="repel-word" data-magnetic="repel" data-magnetic-displacement={magneticConfig.maxDisplacement}>ke</span>{' '}
+                  <span className="repel-word" data-magnetic="repel" data-magnetic-displacement={magneticConfig.maxDisplacement}>kata-kata</span>{' '}
+                  <span className="repel-word" data-magnetic="repel" data-magnetic-displacement={magneticConfig.maxDisplacement}>ini</span>{' '}
+                  <span className="repel-word" data-magnetic="repel" data-magnetic-displacement={magneticConfig.maxDisplacement}>buat</span>{' '}
+                  <span className="repel-word" data-magnetic="repel" data-magnetic-displacement={magneticConfig.maxDisplacement}>dorong</span>{' '}
+                  <span className="repel-word" data-magnetic="repel" data-magnetic-displacement={magneticConfig.maxDisplacement}>menjauh!</span>
                 </p>
                 <div className="repel-badges-row">
                   <span className="repel-badge" data-magnetic="repel" data-magnetic-displacement={magneticConfig.maxDisplacement}>
-                    🏃 Dodge
+                    🏃 Hindar
                   </span>
                   <span className="repel-badge" data-magnetic="repel" data-magnetic-displacement={magneticConfig.maxDisplacement}>
-                    💨 Push Away
+                    💨 Dorong Teks
                   </span>
                 </div>
                 <div className="preview-click-hint">
-                  <span>💡 Click anywhere to test click reaction ({clickConfig.variant})</span>
+                  <span>💡 Klik di mana aja di panggung untuk liat animasi klik ({clickConfig.variant})</span>
                 </div>
               </div>
 
@@ -507,9 +507,9 @@ export function PlaygroundSection({ onConfigChange }: PlaygroundSectionProps) {
                 style={{ marginTop: '16px' }}
               >
                 <div className="card-top-indicator">
-                  <span className="label">Card Target</span>
+                  <span className="label">Target Kartu</span>
                 </div>
-                <p>Attracts cursor &amp; expands on hover</p>
+                <p>Menarik kursor sekaligus memperbesar bentuk pas di-hover</p>
               </div>
             </div>
           </div>
