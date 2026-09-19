@@ -10,8 +10,6 @@ interface CursorCardData {
   category: string;
   title: string;
   description: string;
-  specs: string[];
-  tags: string[];
   config: CursorProps;
   accentColor: string;
 }
@@ -20,10 +18,8 @@ const showcaseCards: CursorCardData[] = [
   {
     number: '01',
     category: 'Minimal',
-    title: 'Dot Minimal',
-    description: 'Titik simpel yang nempel presisi tanpa jeda, cocok buat web portofolio atau blog bersih.',
-    specs: ['10px Core', 'Ngebut', 'Ripple Click'],
-    tags: ['dot', 'minimal', 'snappy'],
+    title: 'Snappy Dot',
+    description: 'Instant response without floating delay. Simple, focused, and precise.',
     accentColor: '#e11d48',
     config: {
       dot: {
@@ -35,10 +31,8 @@ const showcaseCards: CursorCardData[] = [
   {
     number: '02',
     category: 'Dual Layer',
-    title: 'Dot + Ring Melayang',
-    description: 'Kombinasi titik inti yang lincah dengan cincin luar yang melayang anggun.',
-    specs: ['8px Core', '36px Ring', 'Inersia Lembut'],
-    tags: ['dual-layer', 'circle', 'floating'],
+    title: 'Dot + Ring',
+    description: 'A tight inner core paired with a trailing outer ring that floats with momentum.',
     accentColor: '#f97316',
     config: {
       dot: {
@@ -51,10 +45,8 @@ const showcaseCards: CursorCardData[] = [
   {
     number: '03',
     category: 'Outline',
-    title: 'Cincin Kosong',
-    description: 'Cincin luar berongga tanpa titik tengah, gerakan inersia sangat mengalir.',
-    specs: ['38px Ring', 'Mengalir', 'Tanpa Titik'],
-    tags: ['outer-only', 'ring', 'smooth'],
+    title: 'Hollow Ring',
+    description: 'A minimalist circular outline with smooth inertial movement and no center dot.',
     accentColor: '#0891b2',
     config: {
       dot: {
@@ -65,11 +57,9 @@ const showcaseCards: CursorCardData[] = [
   },
   {
     number: '04',
-    category: 'Partikel',
-    title: 'Jejak Komet',
-    description: 'Ekor partikel lentur yang meliuk dinamis ngikutin ayunan mouse kamu.',
-    specs: ['12 Partikel', 'Lentur', 'Burst Click'],
-    tags: ['trail', 'comet', 'physics'],
+    category: 'Particle',
+    title: 'Particle Trail',
+    description: 'A curving comet tail of fading dots that bends naturally as you move.',
     accentColor: '#7c3aed',
     config: {
       dot: {
@@ -81,11 +71,9 @@ const showcaseCards: CursorCardData[] = [
   },
   {
     number: '05',
-    category: 'Interaktif',
-    title: 'Magnet & Dorong',
-    description: 'Kursor tertarik otomatis ke tombol dan bisa dorong tulisan menjauh.',
-    specs: ['Sedot Magnet', 'Dorong Teks', 'Morph Halo'],
-    tags: ['magnetic', 'repel', 'morph'],
+    category: 'Interactive',
+    title: 'Magnetic & Repel',
+    description: 'Snaps cleanly to interactive buttons while gently pushing surrounding text away.',
     accentColor: '#2563eb',
     config: {
       dot: {
@@ -99,11 +87,9 @@ const showcaseCards: CursorCardData[] = [
   },
   {
     number: '06',
-    category: 'Glow',
-    title: 'Spotlight Sorot',
-    description: 'Cahaya lembut yang menerangi konten tepat di bawah posisi kursor.',
-    specs: ['150px Radius', 'Cahaya Lembut', 'Ambient'],
-    tags: ['spotlight', 'radial', 'glow'],
+    category: 'Lighting',
+    title: 'Soft Spotlight',
+    description: 'A gentle luminous disc that illuminates whatever section your pointer is over.',
     accentColor: '#d97706',
     config: {
       dot: {
@@ -127,10 +113,10 @@ export function ShowcaseSection({ onCursorChange }: ShowcaseSectionProps) {
     <section id="showcase" className="showcase-section">
       <div className="container">
         <div className="section-header">
-          <div className="section-eyebrow">Katalog Gaya</div>
-          <h2>Pilihan Gaya Kursor</h2>
+          <div className="section-eyebrow">Presets</div>
+          <h2>Preset Styles</h2>
           <p>
-            Arahin kursor kamu ke kartu mana aja untuk langsung ngerasain karakternya.
+            Hover over any preset to feel its physics. Click to activate it across the page.
           </p>
         </div>
 
@@ -150,29 +136,19 @@ export function ShowcaseSection({ onCursorChange }: ShowcaseSectionProps) {
                 <div className="cursor-card-header">
                   <div className="card-header-left">
                     <span className="card-index-num">{card.number}</span>
-                    <span className="card-category-tag">{card.category}</span>
+                    <h3>{card.title}</h3>
                   </div>
                   <div className="card-header-right">
                     <span className={`card-status-badge ${isActive ? 'active' : ''}`}>
                       <span className="card-status-dot" />
-                      {isActive ? 'Active' : 'Hover'}
+                      {isActive ? 'Active' : 'Preview'}
                     </span>
                   </div>
                 </div>
 
-                {/* Title & Description */}
+                {/* Description */}
                 <div className="cursor-card-content">
-                  <h3>{card.title}</h3>
                   <p>{card.description}</p>
-                </div>
-
-                {/* Key Specs Pills */}
-                <div className="card-specs-row">
-                  {card.specs.map((spec, sIdx) => (
-                    <span key={sIdx} className="card-spec-item">
-                      {spec}
-                    </span>
-                  ))}
                 </div>
 
                 {/* Interactive Test Pad */}
@@ -185,14 +161,14 @@ export function ShowcaseSection({ onCursorChange }: ShowcaseSectionProps) {
                         data-magnetic-strength="0.8"
                         type="button"
                       >
-                        <span>🧲 Sedot</span>
+                        <span>Magnetic Button</span>
                       </button>
                       <span
                         className="card-stage-pill repel-pill"
                         data-magnetic="repel"
                         data-magnetic-displacement="26"
                       >
-                        💨 Dorong Teks
+                        Repel Text
                       </span>
                     </div>
                   ) : (
@@ -201,20 +177,16 @@ export function ShowcaseSection({ onCursorChange }: ShowcaseSectionProps) {
                       data-morph
                       data-morph-size="52"
                     >
-                      Sentuh Aku
+                      Hover to Test
                     </span>
                   )}
                 </div>
 
                 {/* Footer */}
                 <div className="cursor-card-footer">
-                  <div className="cursor-card-tags">
-                    {card.tags.map((tag) => (
-                      <span key={tag} className="cursor-card-tag">
-                        #{tag}
-                      </span>
-                    ))}
-                  </div>
+                  <span className="card-footer-hint">
+                    {isActive ? 'Currently active' : 'Click to select'}
+                  </span>
 
                   <a
                     href="#playground"
@@ -224,7 +196,7 @@ export function ShowcaseSection({ onCursorChange }: ShowcaseSectionProps) {
                       onCursorChange(card.config);
                     }}
                   >
-                    <span>Atur di Studio</span>
+                    <span>Customize</span>
                     <span className="arrow-icon">→</span>
                   </a>
                 </div>

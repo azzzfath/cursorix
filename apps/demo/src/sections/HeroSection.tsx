@@ -24,8 +24,8 @@ export function HeroSection() {
       <div className="container">
         <div className="hero-content">
           <div className="hero-badge">
-            <span className="hero-badge-pill">📍 Depok</span>
-            <span className="hero-badge-text">Dibuat santai tapi performa ngebut • Zero deps</span>
+            <span className="hero-badge-pill">Open Source</span>
+            <span className="hero-badge-text">v0.1.0 for React 18 & 19</span>
           </div>
 
           <h1 className="hero-title">
@@ -33,12 +33,12 @@ export function HeroSection() {
           </h1>
 
           <p className="hero-tagline">
-            Kursor website kamu, tapi gak ngebosenin.
+            Custom cursors that feel good.
           </p>
 
           <p className="hero-subtitle">
-            Library kursor kustom yang luwes, responsif, dan ringan untuk React.
-            Tinggal pasang satu komponen, gabungin efek magnet, jejak partikel, sampai spotlight sesuka hati.
+            A small React library for smooth, physics-based cursor interactions.
+            Drop in magnetic buttons, fluid trails, and hover morphs with zero dependencies.
           </p>
 
           {/* Package Manager & Copy Bar */}
@@ -62,7 +62,7 @@ export function HeroSection() {
               id="hero-install-btn"
               data-morph
               data-magnetic
-              title="Klik untuk copy perintah"
+              title="Click to copy command"
             >
               <div className="hero-install-left">
                 <span className="prefix">$</span>
@@ -81,7 +81,7 @@ export function HeroSection() {
                     </svg>
                   )}
                 </span>
-                <span className="copy-tooltip">{copied ? 'Tersalin!' : 'Salin'}</span>
+                <span className="copy-tooltip">{copied ? 'Copied' : 'Copy'}</span>
               </div>
             </div>
           </div>
@@ -91,9 +91,9 @@ export function HeroSection() {
             <div className="hero-sandbox-top">
               <div className="sandbox-header-left">
                 <span className="sandbox-pulse-dot" />
-                <span className="sandbox-title">Coba Langsung Di Sini</span>
+                <span className="sandbox-title">Interactive Preview</span>
               </div>
-              <span className="sandbox-hint">Arahin kursor ke tombol-tombol di bawah 👇</span>
+              <span className="sandbox-hint">Move your mouse over the controls below</span>
             </div>
 
             <div className="hero-sandbox-buttons">
@@ -103,7 +103,7 @@ export function HeroSection() {
                 data-magnetic="attract"
                 data-magnetic-strength="0.85"
               >
-                <span>🧲 Sedot Kursor</span>
+                <span>Magnetic Button</span>
               </button>
 
               <span
@@ -111,7 +111,7 @@ export function HeroSection() {
                 data-magnetic="repel"
                 data-magnetic-displacement="26"
               >
-                <span>💨 Coba Dorong Aku</span>
+                <span>Repel Element</span>
               </span>
 
               <button
@@ -120,19 +120,19 @@ export function HeroSection() {
                 data-morph
                 data-morph-size="64"
               >
-                <span>✨ Kursor Membesar</span>
+                <span>Hover to Morph</span>
               </button>
 
               <button
                 type="button"
                 className="sandbox-btn click-btn"
               >
-                <span>🎈 Klik Efek Ripple</span>
+                <span>Click for Ripple</span>
               </button>
             </div>
 
             <div className="hero-sandbox-note">
-              <span>💡 Ditenagai <code>requestAnimationFrame</code> GPU — 0 lag, enteng, &amp; hemat baterai</span>
+              <span>Runs on <code>requestAnimationFrame</code> • Zero dependencies • Smooth 60+ FPS</span>
             </div>
           </div>
         </div>

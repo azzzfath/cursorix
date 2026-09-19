@@ -711,33 +711,34 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .card-header-left {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
 .card-index-num {
   font-family: 'Space Grotesk', monospace;
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 700;
   color: var(--text-muted);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
+  opacity: 0.7;
 }
 
-.card-category-tag {
-  font-size: 0.7rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  padding: 2px 7px;
-  border-radius: 5px;
-  background: var(--bg-secondary);
-  color: var(--text-secondary);
-  border: 1px solid var(--border-color);
+.card-header-left h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  transition: color 0.2s ease;
+}
+
+.cursor-card:hover .card-header-left h3 {
+  color: var(--card-accent, var(--accent-secondary));
 }
 
 .card-status-badge {
@@ -763,51 +764,21 @@ section {
 }
 
 .card-status-badge.active {
-  background: rgba(233, 69, 96, 0.08);
+  background: rgba(225, 29, 72, 0.08);
   color: var(--card-accent, var(--accent-secondary));
   border-color: var(--card-accent, var(--accent-secondary));
 }
 
 .card-status-badge.active .card-status-dot {
   background: var(--card-accent, var(--accent-secondary));
-  box-shadow: 0 0 6px var(--card-accent, var(--accent-secondary));
-}
-
-.cursor-card-content h3 {
-  font-size: 1.12rem;
-  font-weight: 700;
-  margin-bottom: 4px;
-  transition: color 0.2s ease;
-}
-
-.cursor-card:hover .cursor-card-content h3 {
-  color: var(--card-accent, var(--accent-secondary));
+  box-shadow: 0 0 5px var(--card-accent, var(--accent-secondary));
 }
 
 .cursor-card-content p {
   font-size: 0.84rem;
   color: var(--text-secondary);
-  line-height: 1.5;
-  margin-bottom: 12px;
-  min-height: 38px;
-}
-
-/* Key specs row */
-.card-specs-row {
-  display: flex;
-  gap: 6px;
-  flex-wrap: wrap;
+  line-height: 1.55;
   margin-bottom: 14px;
-}
-
-.card-spec-item {
-  font-size: 0.7rem;
-  font-weight: 500;
-  color: var(--text-secondary);
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-color);
-  padding: 2px 7px;
-  border-radius: 4px;
 }
 
 /* Interactive Test Pad */
@@ -816,13 +787,13 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 16px;
-  padding: 14px;
+  margin-bottom: 14px;
+  padding: 16px;
   background: var(--stage-bg);
   border-radius: 10px;
   border: 1px dashed var(--border-color);
-  min-height: 68px;
-  transition: border-color 0.2s ease;
+  min-height: 64px;
+  transition: border-color 0.2s ease, background 0.2s ease;
 }
 
 .cursor-card:hover .cursor-card-stage {
@@ -842,13 +813,13 @@ section {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  padding: 6px 14px;
-  border-radius: 6px;
+  padding: 7px 14px;
+  border-radius: 8px;
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   color: var(--text-primary);
   font-size: 0.78rem;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;
   box-shadow: var(--shadow-sm);
@@ -866,9 +837,8 @@ section {
 }
 
 .card-stage-pill.repel-pill {
-  background: rgba(233, 69, 96, 0.05);
-  color: var(--accent-primary);
-  border-color: rgba(233, 69, 96, 0.2);
+  background: var(--bg-card);
+  color: var(--text-primary);
 }
 
 .cursor-card-footer {
@@ -876,19 +846,13 @@ section {
   align-items: center;
   justify-content: space-between;
   border-top: 1px solid var(--border-color);
-  padding-top: 12px;
+  padding-top: 10px;
 }
 
-.cursor-card-tags {
-  display: flex;
-  gap: 5px;
-  flex-wrap: wrap;
-}
-
-.cursor-card-tag {
-  font-size: 0.72rem;
+.card-footer-hint {
+  font-size: 0.74rem;
   color: var(--text-muted);
-  font-family: 'Space Grotesk', monospace;
+  font-weight: 500;
 }
 
 .card-customize-link {

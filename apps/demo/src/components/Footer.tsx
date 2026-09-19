@@ -4,7 +4,7 @@ export function Footer() {
       <div className="container footer-inner">
         <div className="footer-left">
           <p>
-            Cursor Depok — Dibuat dengan penuh dedikasi di Depok. Lisensi MIT.
+            Cursor Depok — Composable custom cursor library for React. Open source under the MIT License.
           </p>
         </div>
         <div className="footer-links">
@@ -15,7 +15,7 @@ export function Footer() {
             npm
           </a>
           <a href="#install" data-magnetic>
-            Dokumentasi
+            Documentation
           </a>
         </div>
       </div>

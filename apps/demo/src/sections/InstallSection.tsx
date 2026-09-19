@@ -44,37 +44,37 @@ export function InstallSection() {
     <section className="install-section" id="install">
       <div className="container">
         <div className="section-header">
-          <div className="section-eyebrow">Dokumentasi Cepat</div>
-          <h2>Cara Pemasangan</h2>
-          <p>Cuma butuh 2 menit, kursor web kamu langsung beda dan lebih hidup.</p>
+          <div className="section-eyebrow">Documentation</div>
+          <h2>Get Started</h2>
+          <p>A quick guide to dropping Cursor Depok into your React project.</p>
         </div>
 
         <div className="install-grid">
           <div className="install-step">
             <div className="install-step-number">1</div>
-            <h3>Install Package</h3>
-            <p>Pasang cursor-depok lewat npm, pnpm, atau yarn.</p>
+            <h3>Install package</h3>
+            <p>Add cursor-depok using your favorite package manager.</p>
             <CodeExample code={installCode} title="Terminal" />
           </div>
 
           <div className="install-step">
             <div className="install-step-number">2</div>
-            <h3>Pasang Komponen</h3>
-            <p>Import dan letakkan komponen &lt;Cursor /&gt; di root aplikasi kamu.</p>
+            <h3>Mount &lt;Cursor /&gt;</h3>
+            <p>Render the component near the root of your React application.</p>
             <CodeExample code={usageCode} title="App.tsx" />
           </div>
 
           <div className="install-step">
             <div className="install-step-number">3</div>
-            <h3>Efek Magnetik</h3>
-            <p>Cukup kasih atribut <code>data-magnetic</code> ke tombol atau link apa aja.</p>
+            <h3>Magnetic elements</h3>
+            <p>Add the <code>data-magnetic</code> attribute to buttons or links to attract the cursor.</p>
             <CodeExample code={magneticCode} title="JSX" />
           </div>
 
           <div className="install-step">
             <div className="install-step-number">4</div>
-            <h3>Efek Morph</h3>
-            <p>Beri atribut <code>data-morph</code> biar kursor membesar pas di-hover.</p>
+            <h3>Hover morphing</h3>
+            <p>Add the <code>data-morph</code> attribute to expand or reshape the cursor on hover.</p>
             <CodeExample code={morphCode} title="JSX" />
           </div>
         </div>

@@ -418,9 +418,9 @@ export function PlaygroundSection({ onConfigChange }: PlaygroundSectionProps) {
     <section id="playground" className="playground-section">
       <div className="container">
         <div className="section-header">
-          <div className="section-eyebrow">Studio Interaktif</div>
-          <h2>Studio Kustomisasi</h2>
-          <p>Ubah parameter kursor secara real-time, rasain interaksinya di panggung, dan langsung copy kodenya.</p>
+          <div className="section-eyebrow">Playground</div>
+          <h2>Interactive Studio</h2>
+          <p>Customize cursor layers in real time and copy the generated component code.</p>
         </div>
 
         <div className="playground-layout">
@@ -428,7 +428,7 @@ export function PlaygroundSection({ onConfigChange }: PlaygroundSectionProps) {
             <div className="playground-preview-header">
               <div className="preview-status">
                 <span className="live-dot" />
-                <span>Panggung Uji Coba</span>
+                <span>Interactive Stage</span>
               </div>
               <div className="preview-layer-tags">
                 {enabledEffects.innerDot && <span className="preview-tag inner-tag">Inner Dot</span>}
@@ -447,7 +447,7 @@ export function PlaygroundSection({ onConfigChange }: PlaygroundSectionProps) {
               <div className="preview-crosshair-center" />
 
               <div className="stage-callout">
-                Gerakin kursor ke panggung untuk ngetes setelan kamu
+                Test your cursor configuration on the elements below
               </div>
 
               <div className="preview-interactive-row">
@@ -457,7 +457,7 @@ export function PlaygroundSection({ onConfigChange }: PlaygroundSectionProps) {
                   data-magnetic-strength="0.8"
                   type="button"
                 >
-                  <span>🧲 Sedot Kursor</span>
+                  <span>Magnetic Button</span>
                 </button>
 
                 <button
@@ -466,35 +466,34 @@ export function PlaygroundSection({ onConfigChange }: PlaygroundSectionProps) {
                   data-morph-size="68"
                   type="button"
                 >
-                  <span>✨ Kursor Membesar</span>
+                  <span>Hover to Morph</span>
                 </button>
               </div>
 
-              {/* Repel Physics Box (Dorong Tulisan) */}
+              {/* Repel Physics Box */}
               <div className="preview-repel-box">
                 <div className="repel-box-title">
-                  <span>⚡ Efek Dorong Teks (Repel)</span>
+                  <span>Repel Physics</span>
                 </div>
                 <p className="repel-text">
-                  <span className="repel-word" data-magnetic="repel" data-magnetic-displacement={magneticConfig.maxDisplacement}>Arahin</span>{' '}
-                  <span className="repel-word" data-magnetic="repel" data-magnetic-displacement={magneticConfig.maxDisplacement}>mouse</span>{' '}
-                  <span className="repel-word" data-magnetic="repel" data-magnetic-displacement={magneticConfig.maxDisplacement}>ke</span>{' '}
-                  <span className="repel-word" data-magnetic="repel" data-magnetic-displacement={magneticConfig.maxDisplacement}>kata-kata</span>{' '}
-                  <span className="repel-word" data-magnetic="repel" data-magnetic-displacement={magneticConfig.maxDisplacement}>ini</span>{' '}
-                  <span className="repel-word" data-magnetic="repel" data-magnetic-displacement={magneticConfig.maxDisplacement}>buat</span>{' '}
-                  <span className="repel-word" data-magnetic="repel" data-magnetic-displacement={magneticConfig.maxDisplacement}>dorong</span>{' '}
-                  <span className="repel-word" data-magnetic="repel" data-magnetic-displacement={magneticConfig.maxDisplacement}>menjauh!</span>
+                  <span className="repel-word" data-magnetic="repel" data-magnetic-displacement={magneticConfig.maxDisplacement}>Push</span>{' '}
+                  <span className="repel-word" data-magnetic="repel" data-magnetic-displacement={magneticConfig.maxDisplacement}>these</span>{' '}
+                  <span className="repel-word" data-magnetic="repel" data-magnetic-displacement={magneticConfig.maxDisplacement}>words</span>{' '}
+                  <span className="repel-word" data-magnetic="repel" data-magnetic-displacement={magneticConfig.maxDisplacement}>away</span>{' '}
+                  <span className="repel-word" data-magnetic="repel" data-magnetic-displacement={magneticConfig.maxDisplacement}>with</span>{' '}
+                  <span className="repel-word" data-magnetic="repel" data-magnetic-displacement={magneticConfig.maxDisplacement}>your</span>{' '}
+                  <span className="repel-word" data-magnetic="repel" data-magnetic-displacement={magneticConfig.maxDisplacement}>mouse.</span>
                 </p>
                 <div className="repel-badges-row">
                   <span className="repel-badge" data-magnetic="repel" data-magnetic-displacement={magneticConfig.maxDisplacement}>
-                    🏃 Hindar
+                    Dodge Target
                   </span>
                   <span className="repel-badge" data-magnetic="repel" data-magnetic-displacement={magneticConfig.maxDisplacement}>
-                    💨 Dorong Teks
+                    Repel Force
                   </span>
                 </div>
                 <div className="preview-click-hint">
-                  <span>💡 Klik di mana aja di panggung untuk liat animasi klik ({clickConfig.variant})</span>
+                  <span>Click anywhere on the stage to trigger click feedback ({clickConfig.variant})</span>
                 </div>
               </div>
 
@@ -507,9 +506,9 @@ export function PlaygroundSection({ onConfigChange }: PlaygroundSectionProps) {
                 style={{ marginTop: '16px' }}
               >
                 <div className="card-top-indicator">
-                  <span className="label">Target Kartu</span>
+                  <span className="label">Magnetic Card</span>
                 </div>
-                <p>Menarik kursor sekaligus memperbesar bentuk pas di-hover</p>
+                <p>Snaps pointer to center and expands radius on hover</p>
               </div>
             </div>
           </div>

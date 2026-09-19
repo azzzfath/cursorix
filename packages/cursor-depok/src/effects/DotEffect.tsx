@@ -200,7 +200,7 @@ export function DotEffect({
       const pressFactor = isMouseDown ? clickScale : 1.0;
 
       // Perceptual smooth interpolation function
-      // 1.0 = instant snap to mouse coordinates ("pas bgt")
+      // 1.0 = instant snap to mouse coordinates (exact tracking)
       // Decreasing towards 0 = progressively and visibly smoother floating delay
       const calcSmoothAlpha = (smoothingInput: number) => {
         const s = Math.max(0, Math.min(1, smoothingInput));
