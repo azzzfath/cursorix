@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Cursor } from 'cursorix';
-import type { CursorProps } from 'cursorix';
+import { Cursor } from 'cursor-depok';
+import type { CursorProps } from 'cursor-depok';
 import { Header } from './components/Header';
 import { HeroSection } from './sections/HeroSection';
 import { ShowcaseSection } from './sections/ShowcaseSection';

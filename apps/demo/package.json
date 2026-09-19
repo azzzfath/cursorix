@@ -11,7 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "cursorix": "workspace:*",
+    "cursor-depok": "workspace:*",
     "react": "^19.2.8",
     "react-dom": "^19.2.8"
   },

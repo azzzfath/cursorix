@@ -1,8 +1,8 @@
 import { CodeExample } from '../components/CodeExample';
 
-const installCode = `npm install cursorix`;
+const installCode = `npm install cursor-depok`;
 
-const usageCode = `import { Cursor } from 'cursorix';
+const usageCode = `import { Cursor } from 'cursor-depok';
 
 function App() {
   return (
@@ -44,36 +44,36 @@ export function InstallSection() {
     <section className="install-section" id="install">
       <div className="container">
         <div className="section-header">
-          <h2>Get Started</h2>
-          <p>Install Cursorix and add beautiful cursor effects in minutes.</p>
+          <h2>Quick Start</h2>
+          <p>Install and use in minutes.</p>
         </div>
 
         <div className="install-grid">
           <div className="install-step">
             <div className="install-step-number">1</div>
-            <h3>Install the package</h3>
-            <p>Add Cursorix to your React project via npm, yarn, or pnpm.</p>
+            <h3>Install</h3>
+            <p>Add cursor-depok to your project.</p>
             <CodeExample code={installCode} title="Terminal" />
           </div>
 
           <div className="install-step">
             <div className="install-step-number">2</div>
-            <h3>Add the Cursor component</h3>
-            <p>Import and configure the cursor with any combination of effects.</p>
+            <h3>Add Component</h3>
+            <p>Import and configure the cursor component.</p>
             <CodeExample code={usageCode} title="App.tsx" />
           </div>
 
           <div className="install-step">
             <div className="install-step-number">3</div>
-            <h3>Add magnetic targets</h3>
-            <p>Use data attributes on any element to make it a magnetic target.</p>
+            <h3>Magnetic Effect</h3>
+            <p>Add data-magnetic to any element to attract the cursor.</p>
             <CodeExample code={magneticCode} title="JSX" />
           </div>
 
           <div className="install-step">
             <div className="install-step-number">4</div>
-            <h3>Add morph targets</h3>
-            <p>Cursor morphs on hover over elements with data-morph attribute.</p>
+            <h3>Morph Effect</h3>
+            <p>Add data-morph to expand the cursor on hover.</p>
             <CodeExample code={morphCode} title="JSX" />
           </div>
         </div>

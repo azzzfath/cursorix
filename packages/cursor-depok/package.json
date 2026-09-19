@@ -1,7 +1,7 @@
 {
-  "name": "cursorix",
+  "name": "cursor-depok",
   "version": "0.1.0",
-  "description": "Beautiful, composable custom cursor effects for React",
+  "description": "Custom cursor effects library for React — from Depok with love",
   "author": "azzzfath <azzamfathurrahman23@gmail.com>",
   "license": "MIT",
   "main": "./dist/index.cjs",

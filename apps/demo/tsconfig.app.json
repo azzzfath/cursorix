@@ -11,7 +11,8 @@
     /* Bundler mode */
     "moduleResolution": "bundler",
     "paths": {
-      "cursorix": ["../../packages/cursorix/src/index.ts"]
+      "cursor-depok": ["../../packages/cursor-depok/src/index.ts"],
+      "cursorix": ["../../packages/cursor-depok/src/index.ts"]
     },
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,

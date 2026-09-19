@@ -1,6 +1,6 @@
 <div align="center">
 
-# ✨ Cursorix
+# ✨ Cursor Depok
 
 <p align="center">
   <strong>Fluid, composable, and hardware-accelerated custom cursor physics for React.</strong>
@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/cursorix"><img src="https://img.shields.io/npm/v/cursorix?style=for-the-badge&color=e94560&logo=npm" alt="npm version" /></a>
+  <a href="https://www.npmjs.com/package/cursor-depok"><img src="https://img.shields.io/npm/v/cursor-depok?style=for-the-badge&color=e94560&logo=npm" alt="npm version" /></a>
   <a href="./LICENSE"><img src="https://img.shields.io/badge/License-MIT-3b82f6.svg?style=for-the-badge" alt="License" /></a>
   <img src="https://img.shields.io/badge/Dependencies-0-10b981?style=for-the-badge" alt="Zero Dependencies" />
   <img src="https://img.shields.io/badge/TypeScript-Strict-3178c6?style=for-the-badge&logo=typescript" alt="TypeScript" />
@@ -28,11 +28,11 @@
 
 ---
 
-## 💡 Why Cursorix?
+## 💡 Why Cursor Depok?
 
 Custom cursors on the web often suffer from input lag, high CPU usage, stutter on high-refresh monitors, and broken mobile gesture handling. 
 
-**Cursorix was built from the ground up to solve these challenges:**
+**Cursor Depok was built from the ground up to solve these challenges:**
 - 🏎️ **Hardware-Accelerated** — Driven by `requestAnimationFrame` with GPU transform translation (`translate3d`). No React state thrashing on mousemove.
 - 🧩 **Single Composable API** — Combine dot layers, trails, magnetic physics, and glows in a single `<Cursor />` component.
 - 🧲 **True Magnetic Physics** — Both **attraction** (snaps into interactive targets) and **repulsion** (physically pushes text/badges away from the cursor).
@@ -45,16 +45,16 @@ Custom cursors on the web often suffer from input lag, high CPU usage, stutter o
 
 ```bash
 # npm
-npm install cursorix
+npm install cursor-depok
 
 # pnpm
-pnpm add cursorix
+pnpm add cursor-depok
 
 # yarn
-yarn add cursorix
+yarn add cursor-depok
 
 # bun
-bun add cursorix
+bun add cursor-depok
 ```
 
 ---
@@ -65,7 +65,7 @@ Add `<Cursor />` anywhere inside your React app:
 
 ```tsx
 import React from 'react';
-import { Cursor } from 'cursorix';
+import { Cursor } from 'cursor-depok';
 
 export default function App() {
   return (
@@ -254,13 +254,13 @@ interface ClickEffectProps {
 
 ### Next.js (App Router)
 
-Because Cursorix interacts with browser DOM and animation frames, simply wrap it in a client component:
+Because Cursor Depok interacts with browser DOM and animation frames, simply wrap it in a client component:
 
 ```tsx
 // components/CustomCursor.tsx
 'use client';
 
-import { Cursor } from 'cursorix';
+import { Cursor } from 'cursor-depok';
 
 export function CustomCursor() {
   return (
@@ -304,9 +304,9 @@ Just import and add `<Cursor />` in your `App.tsx` directly!
 This project is built as an open source monorepo managed with `pnpm`:
 
 ```
-cursorix/
+cursor-depok/
 ├── packages/
-│   └── cursorix/          # Core React library (published to npm)
+│   └── cursor-depok/      # Core React library (published to npm)
 │       ├── src/
 │       │   ├── effects/   # Modular effect layers (Dot, Trail, Spotlight, Magnet, Click, Morph)
 │       │   ├── hooks/     # Physics & event hooks (useMousePosition, useMagnetic, useMorph)
@@ -335,11 +335,11 @@ pnpm install
 # 3. Start local development server (demo studio)
 pnpm dev
 
-# 4. Build cursorix library package
-pnpm --filter cursorix build
+# 4. Build cursor-depok library package
+pnpm --filter cursor-depok build
 
 # 5. Build all packages & demo website
-pnpm build:all
+pnpm build
 ```
 
 ---
@@ -358,4 +358,4 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 
 ## 📄 License
 
-This project is licensed under the [MIT License](./LICENSE) © 2026-present [Cursorix Contributors](https://github.com/azzzfath/cursorix).
+This project is licensed under the [MIT License](./LICENSE) © 2026-present [Cursor Depok Contributors](https://github.com/azzzfath/cursorix).

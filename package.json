@@ -1,11 +1,11 @@
 {
-  "name": "cursorix-monorepo",
+  "name": "cursor-depok-monorepo",
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "dev": "pnpm --filter demo dev",
-    "build": "pnpm --filter cursorix build && pnpm --filter demo build && cp -R apps/demo/dist .",
-    "build:package": "pnpm --filter cursorix build",
+    "build": "pnpm --filter cursor-depok build && pnpm --filter demo build && cp -R apps/demo/dist .",
+    "build:package": "pnpm --filter cursor-depok build",
     "build:demo": "pnpm --filter demo build"
   },
   "engines": {

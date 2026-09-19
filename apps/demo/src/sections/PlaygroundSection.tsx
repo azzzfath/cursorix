@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect } from 'react';
-import type { CursorProps, DotShape, DotLayerConfig, TrailVariant, SpotlightVariant, ClickVariant } from 'cursorix';
+import type { CursorProps, DotShape, DotLayerConfig, TrailVariant, SpotlightVariant, ClickVariant } from 'cursor-depok';
 import { CodeExample } from '../components/CodeExample';
 
 interface PlaygroundSectionProps {
@@ -418,9 +418,9 @@ export function PlaygroundSection({ onConfigChange }: PlaygroundSectionProps) {
     <section id="playground" className="playground-section">
       <div className="container">
         <div className="section-header">
-          <div className="section-eyebrow">Creative Studio</div>
-          <h2>Live Configuration Studio</h2>
-          <p>Tweak every parameter in real-time, test interactions on the stage, and copy production-ready code.</p>
+          <div className="section-eyebrow">Playground</div>
+          <h2>Interactive Studio</h2>
+          <p>Customize your cursor in real time and copy the code.</p>
         </div>
 
         <div className="playground-layout">
@@ -428,7 +428,7 @@ export function PlaygroundSection({ onConfigChange }: PlaygroundSectionProps) {
             <div className="playground-preview-header">
               <div className="preview-status">
                 <span className="live-dot" />
-                <span>Interactive Stage</span>
+                <span>Live Stage</span>
               </div>
               <div className="preview-layer-tags">
                 {enabledEffects.innerDot && <span className="preview-tag inner-tag">Inner Dot</span>}
@@ -447,7 +447,7 @@ export function PlaygroundSection({ onConfigChange }: PlaygroundSectionProps) {
               <div className="preview-crosshair-center" />
 
               <div className="stage-callout">
-                Move cursor over the stage &amp; interact with test objects
+                Move your cursor here to test
               </div>
 
               <div className="preview-interactive-row">
@@ -457,7 +457,7 @@ export function PlaygroundSection({ onConfigChange }: PlaygroundSectionProps) {
                   data-magnetic-strength="0.8"
                   type="button"
                 >
-                  <span>🧲 Attract Magnet</span>
+                  <span>🧲 Attract</span>
                 </button>
 
                 <button
@@ -466,14 +466,14 @@ export function PlaygroundSection({ onConfigChange }: PlaygroundSectionProps) {
                   data-morph-size="68"
                   type="button"
                 >
-                  <span>Morph Expand</span>
+                  <span>Hover Expand</span>
                 </button>
               </div>
 
               {/* Repel Physics Box (Dorong Tulisan) */}
               <div className="preview-repel-box">
                 <div className="repel-box-title">
-                  <span>⚡ Repel Physics (Push Text &amp; Badges)</span>
+                  <span>⚡ Repel Effect</span>
                 </div>
                 <p className="repel-text">
                   <span className="repel-word" data-magnetic="repel" data-magnetic-displacement={magneticConfig.maxDisplacement}>Hover</span>{' '}
@@ -487,14 +487,14 @@ export function PlaygroundSection({ onConfigChange }: PlaygroundSectionProps) {
                 </p>
                 <div className="repel-badges-row">
                   <span className="repel-badge" data-magnetic="repel" data-magnetic-displacement={magneticConfig.maxDisplacement}>
-                    🏃 Dodge Badge
+                    🏃 Dodge
                   </span>
                   <span className="repel-badge" data-magnetic="repel" data-magnetic-displacement={magneticConfig.maxDisplacement}>
-                    💨 Repel Text
+                    💨 Push Away
                   </span>
                 </div>
                 <div className="preview-click-hint">
-                  <span>💡 Click anywhere on stage to trigger click reaction ({clickConfig.variant})</span>
+                  <span>💡 Click anywhere to test click reaction ({clickConfig.variant})</span>
                 </div>
               </div>
 
@@ -507,9 +507,9 @@ export function PlaygroundSection({ onConfigChange }: PlaygroundSectionProps) {
                 style={{ marginTop: '16px' }}
               >
                 <div className="card-top-indicator">
-                  <span className="label">Interactive Surface</span>
+                  <span className="label">Card Target</span>
                 </div>
-                <p>Combines magnetic pull &amp; shape expansion simultaneously on hover</p>
+                <p>Attracts cursor &amp; expands on hover</p>
               </div>
             </div>
           </div>

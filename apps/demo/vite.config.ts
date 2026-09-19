@@ -31,7 +31,8 @@ export default defineConfig({
   resolve: {
     dedupe: ['react', 'react-dom'],
     alias: {
-      cursorix: resolve(__dirname, '../../packages/cursorix/src/index.ts'),
+      'cursor-depok': resolve(__dirname, '../../packages/cursor-depok/src/index.ts'),
+      cursorix: resolve(__dirname, '../../packages/cursor-depok/src/index.ts'),
       react: resolve(__dirname, 'node_modules/react'),
       'react-dom': resolve(__dirname, 'node_modules/react-dom'),
     },

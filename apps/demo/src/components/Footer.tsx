@@ -4,18 +4,18 @@ export function Footer() {
       <div className="container footer-inner">
         <div className="footer-left">
           <p>
-            Cursorix — Open Source React Library. MIT Licensed.
+            Cursor Depok — React Custom Cursor. MIT License.
           </p>
         </div>
         <div className="footer-links">
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" data-magnetic>
+          <a href="https://github.com/azzzfath/cursorix" target="_blank" rel="noopener noreferrer" data-magnetic>
             GitHub
           </a>
-          <a href="https://www.npmjs.com" target="_blank" rel="noopener noreferrer" data-magnetic>
+          <a href="https://www.npmjs.com/package/cursor-depok" target="_blank" rel="noopener noreferrer" data-magnetic>
             npm
           </a>
-          <a href="#" data-magnetic>
-            Documentation
+          <a href="#install" data-magnetic>
+            Docs
           </a>
         </div>
       </div>

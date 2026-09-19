@@ -1,6 +1,6 @@
 <div align="center">
 
-# ✨ Cursorix
+# ✨ Cursor Depok
 
 <p align="center">
   <strong>Fluid, composable, and hardware-accelerated custom cursor physics for React.</strong>
@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/cursorix"><img src="https://img.shields.io/npm/v/cursorix?style=for-the-badge&color=e94560&logo=npm" alt="npm version" /></a>
+  <a href="https://www.npmjs.com/package/cursor-depok"><img src="https://img.shields.io/npm/v/cursor-depok?style=for-the-badge&color=e94560&logo=npm" alt="npm version" /></a>
   <a href="./LICENSE"><img src="https://img.shields.io/badge/License-MIT-3b82f6.svg?style=for-the-badge" alt="License" /></a>
   <img src="https://img.shields.io/badge/Dependencies-0-10b981?style=for-the-badge" alt="Zero Dependencies" />
   <img src="https://img.shields.io/badge/TypeScript-Strict-3178c6?style=for-the-badge&logo=typescript" alt="TypeScript" />
@@ -23,16 +23,16 @@
 
 ```bash
 # npm
-npm install cursorix
+npm install cursor-depok
 
 # pnpm
-pnpm add cursorix
+pnpm add cursor-depok
 
 # yarn
-yarn add cursorix
+yarn add cursor-depok
 
 # bun
-bun add cursorix
+bun add cursor-depok
 ```
 
 ---
@@ -41,7 +41,7 @@ bun add cursorix
 
 ```tsx
 import React from 'react';
-import { Cursor } from 'cursorix';
+import { Cursor } from 'cursor-depok';
 
 export default function App() {
   return (
@@ -225,20 +225,19 @@ interface ClickEffectProps {
 
 ## ⚡ Framework Integration (Next.js)
 
-Because Cursorix interacts with browser DOM and animation frames, wrap it in a client component in Next.js App Router:
-
+Because Cursor Depok interacts with browser DOM and animation frames, wrap it in a client component in Next.js App Router:
 ```tsx
-// components/CustomCursor.tsx
+// components/ClientCursor.tsx
 'use client';
 
-import { Cursor } from 'cursorix';
+import { Cursor } from 'cursor-depok';
 
-export function CustomCursor() {
+export default function ClientCursor() {
   return (
     <Cursor
       dot={{
         inner: { shape: 'circle', color: '#e94560', size: 8 },
-        outer: { shape: 'circle', variant: 'border', color: '#e94560', size: 32 },
+        outer: { shape: 'circle', color: '#e94560', size: 36 },
       }}
       magnetic={{ mode: 'both' }}
     />
@@ -246,8 +245,10 @@ export function CustomCursor() {
 }
 ```
 
+Then mount `<ClientCursor />` in your root `app/layout.tsx`.
+
 ---
 
 ## 📄 License
 
-MIT © 2026-present [Cursorix Contributors](https://github.com/azzzfath/cursorix).
+MIT © 2026-present [Cursor Depok Contributors](https://github.com/azzzfath/cursorix).

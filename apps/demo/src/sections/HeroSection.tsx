@@ -3,10 +3,10 @@ import { useState } from 'react';
 type PackageManager = 'npm' | 'pnpm' | 'yarn' | 'bun';
 
 const installCommands: Record<PackageManager, string> = {
-  npm: 'npm install cursorix',
-  pnpm: 'pnpm add cursorix',
-  yarn: 'yarn add cursorix',
-  bun: 'bun add cursorix',
+  npm: 'npm install cursor-depok',
+  pnpm: 'pnpm add cursor-depok',
+  yarn: 'yarn add cursor-depok',
+  bun: 'bun add cursor-depok',
 };
 
 export function HeroSection() {
@@ -30,17 +30,16 @@ export function HeroSection() {
         <div className="hero-content">
           <div className="hero-badge">
             <span className="hero-badge-pill">Release</span>
-            <span className="hero-badge-text">v0.1.0 — Composable Cursor Physics for React</span>
+            <span className="hero-badge-text">v0.1.0 • Cursor Depok for React</span>
           </div>
 
           <h1 className="hero-title">
-            Fluid Cursor Effects <br />
-            <span className="hero-title-gradient">Built for React</span>
+            Cursor Depok <br />
+            <span className="hero-title-gradient">for React</span>
           </h1>
 
           <p className="hero-subtitle">
-            A zero-dependency React library providing composable, hardware-accelerated cursor interactions.
-            Mix geometric layers, Catmull-Rom trails, spotlights, magnetic attraction, and shape morphing.
+            A lightweight library to add smooth, interactive cursor effects to your React apps. Zero dependencies.
           </p>
 
           {/* Package Manager & Copy Bar */}
@@ -91,27 +90,27 @@ export function HeroSection() {
           {/* Feature Specs */}
           <div className="hero-features">
             <div className="hero-feature-item">
-              <span className="feature-stat">60–240Hz</span>
-              <strong className="feature-title">Native Frame Rate</strong>
-              <span className="feature-desc">Uncapped requestAnimationFrame</span>
+              <span className="feature-stat">60 FPS</span>
+              <strong className="feature-title">Smooth</strong>
+              <span className="feature-desc">Zero lag animation</span>
             </div>
 
             <div className="hero-feature-item">
               <span className="feature-stat">0 deps</span>
-              <strong className="feature-title">Zero Dependencies</strong>
-              <span className="feature-desc">Pure CSS &amp; React runtime</span>
+              <strong className="feature-title">Lightweight</strong>
+              <span className="feature-desc">Pure React &amp; CSS</span>
             </div>
 
             <div className="hero-feature-item">
               <span className="feature-stat">5 effects</span>
-              <strong className="feature-title">Composable Stack</strong>
-              <span className="feature-desc">Dot, Trail, Glow, Magnet, Morph</span>
+              <strong className="feature-title">Modular</strong>
+              <span className="feature-desc">Mix &amp; match anytime</span>
             </div>
 
             <div className="hero-feature-item">
               <span className="feature-stat">TypeScript</span>
-              <strong className="feature-title">Fully Typed</strong>
-              <span className="feature-desc">Strict declaration files</span>
+              <strong className="feature-title">Typed</strong>
+              <span className="feature-desc">Full type safety</span>
             </div>
           </div>
         </div>

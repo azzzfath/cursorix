@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import type { CursorProps } from 'cursorix';
+import type { CursorProps } from 'cursor-depok';
 
 interface ShowcaseSectionProps {
   onCursorChange: (config: CursorProps) => void;
@@ -20,9 +20,9 @@ const showcaseCards: CursorCardData[] = [
   {
     number: '01',
     category: 'Minimal',
-    title: 'Dot Only',
-    description: 'Ultra-minimalist single dot tracking your cursor with snappy zero-lag precision.',
-    specs: ['Dot: 10px', 'Smooth: 0.95', 'Tactile Click'],
+    title: 'Dot',
+    description: 'A clean, responsive dot that follows your cursor.',
+    specs: ['10px Dot', 'Snappy', 'Ripple Click'],
     tags: ['dot', 'minimal', 'snappy'],
     accentColor: '#e94560',
     config: {
@@ -34,10 +34,10 @@ const showcaseCards: CursorCardData[] = [
   },
   {
     number: '02',
-    category: 'Dual-Layer',
-    title: 'Dot + Outer Ring',
-    description: 'The signature dual-layer: responsive inner core with a smooth floating outer halo.',
-    specs: ['Core: 8px', 'Ring: 36px', 'Float: 0.45'],
+    category: 'Dual Layer',
+    title: 'Dot + Ring',
+    description: 'An inner dot with a smooth floating outer ring.',
+    specs: ['8px Dot', '36px Ring', 'Smooth Float'],
     tags: ['dual-layer', 'circle', 'floating'],
     accentColor: '#ff6b6b',
     config: {
@@ -51,9 +51,9 @@ const showcaseCards: CursorCardData[] = [
   {
     number: '03',
     category: 'Outline',
-    title: 'Outer Only',
-    description: 'Hollow ring with smooth inertial float and zero inner dot for clean aesthetics.',
-    specs: ['Ring: 38px', 'Smooth: 0.40', 'Zero Core'],
+    title: 'Ring Only',
+    description: 'A hollow ring with smooth trailing motion.',
+    specs: ['38px Ring', 'Smooth', 'No Core'],
     tags: ['outer-only', 'ring', 'smooth'],
     accentColor: '#4ecdc4',
     config: {
@@ -66,9 +66,9 @@ const showcaseCards: CursorCardData[] = [
   {
     number: '04',
     category: 'Particle',
-    title: 'Fluid Comet Trail',
-    description: 'Aerodynamic particle tail that gracefully curves with cursor momentum.',
-    specs: ['Trail: 12 Dots', 'Comet Tail', 'Particle Burst'],
+    title: 'Trail',
+    description: 'A dynamic particle tail that follows cursor movement.',
+    specs: ['12 Dots', 'Comet Tail', 'Burst Click'],
     tags: ['trail', 'comet', 'physics'],
     accentColor: '#845ef7',
     config: {
@@ -81,10 +81,10 @@ const showcaseCards: CursorCardData[] = [
   },
   {
     number: '05',
-    category: 'Physics',
+    category: 'Interactive',
     title: 'Magnetic & Morph',
-    description: 'Snaps to buttons, physically pushes repel text away, and expands into a hover halo.',
-    specs: ['Attract & Repel', 'Push: 32px', 'Morph Halo'],
+    description: 'Attracts to buttons and expands on hover.',
+    specs: ['Magnet', 'Push Text', 'Hover Expand'],
     tags: ['magnetic', 'repel', 'morph'],
     accentColor: '#06b6d4',
     config: {
@@ -100,9 +100,9 @@ const showcaseCards: CursorCardData[] = [
   {
     number: '06',
     category: 'Lighting',
-    title: 'Ambient Spotlight',
-    description: 'Soft radial beam illuminating the content directly beneath the cursor.',
-    specs: ['Radius: 150px', 'Radial Glow', 'Soft Pulse'],
+    title: 'Spotlight',
+    description: 'A soft glow highlighting content under the cursor.',
+    specs: ['150px Radius', 'Soft Glow', 'Ambient'],
     tags: ['spotlight', 'radial', 'glow'],
     accentColor: '#f59e0b',
     config: {
@@ -127,10 +127,10 @@ export function ShowcaseSection({ onCursorChange }: ShowcaseSectionProps) {
     <section id="showcase" className="showcase-section">
       <div className="container">
         <div className="section-header">
-          <div className="section-eyebrow">Curated Presets</div>
-          <h2>Explore Signature Styles</h2>
+          <div className="section-eyebrow">Presets</div>
+          <h2>Cursor Styles</h2>
           <p>
-            Hover over any preset card to instantly feel its geometry, smoothing, and physics.
+            Hover over any card to preview the cursor.
           </p>
         </div>
 
@@ -192,7 +192,7 @@ export function ShowcaseSection({ onCursorChange }: ShowcaseSectionProps) {
                         data-magnetic="repel"
                         data-magnetic-displacement="26"
                       >
-                        💨 Repel Text
+                        💨 Push Text
                       </span>
                     </div>
                   ) : (
@@ -201,7 +201,7 @@ export function ShowcaseSection({ onCursorChange }: ShowcaseSectionProps) {
                       data-morph
                       data-morph-size="52"
                     >
-                      Hover Target
+                      Hover Me
                     </span>
                   )}
                 </div>
@@ -224,7 +224,7 @@ export function ShowcaseSection({ onCursorChange }: ShowcaseSectionProps) {
                       onCursorChange(card.config);
                     }}
                   >
-                    <span>Studio</span>
+                    <span>Customize</span>
                     <span className="arrow-icon">→</span>
                   </a>
                 </div>
